@@ -47,8 +47,9 @@ Alternatively, start a local development server from the project directory:
 
 Save a screenshot of the completed dashboard as `images/Screenshots/image copy.png`. It will appear below automatically:
 
-![EduLearn LMS course dashboard](images/Screenshots/image.png)
-![EduLearn LMS course dashboard](images/Screenshots/image copy.png)
+![EduLearn LMS course dashboard](images/Screenshots/image.png).
+
+![EduLearn LMS course dashboard](images/Screenshots/image%20copy.png)
 
 ## Project Structure
 

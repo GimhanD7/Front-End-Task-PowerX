@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LMS Course Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+         HEADER
+    ========================================= -->
+    <header class="header">
+
+        <div class="container header-container">
+
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <span>EduLearn</span>
+            </a>
+
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="#" class="nav-link active">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+
+                <a href="#courses" class="nav-link">
+                    <i class="fa-solid fa-book-open"></i>
+                    My Courses
+                </a>
+
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+
+            </nav>
+
+
+            <!-- Header Right -->
+            <div class="header-actions">
+
+                <!-- Dark Mode -->
+                <button
+                    class="icon-button"
+                    id="darkModeBtn"
+                    aria-label="Toggle dark mode"
+                >
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+
+
+
+                <!-- Student Profile -->
+                <div class="student-profile">
+
+                    <img
+                        src="images/profile.png"
+                        alt="Student Profile"
+                        class="profile-image"
+                    >
+
+                    <div class="profile-info">
+                        <span class="profile-name">Gimhana Deshapriya</span>
+                        <span class="profile-role">Student</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Mobile Menu -->
+                <button
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open mobile menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
+    <main>
+
+        <!-- ====================================
+             WELCOME SECTION
+        ===================================== -->
+        <section class="welcome-section">
+
+            <div class="container">
+
+                <div class="welcome-content">
+
+                    <div>
+                        <p class="welcome-label">
+                     
+                            Welcome back
+                        </p>
+
+                        <h1>
+                            Hello, <span>Gimhana!</span> 
+                        </h1>
+
+                        <p class="welcome-message">
+                            Continue learning and make progress toward your goals.
+                        </p>
+                    </div>
+
+
+                    <!-- Current Date -->
+                    <div class="date-card">
+
+                        <div class="date-icon">
+                            <i class="fa-regular fa-calendar"></i>
+                        </div>
+
+                        <div>
+                            <span class="date-label">Today</span>
+                            <strong id="currentDate">
+                                Loading...
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             DASHBOARD CONTENT
+        ===================================== -->
+        <section class="dashboard-section">
+
+            <div class="container">
+
+
+                <!-- ============================
+                     PROGRESS SUMMARY
+                ============================= -->
+                <div class="summary-section">
+
+                    <div class="section-heading">
+
+                        <div>
+                            <span class="section-label">
+                                OVERVIEW
+                            </span>
+
+                            <h2>Your Progress</h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-grid">
+
+                        <!-- Courses Enrolled -->
+                        <div class="summary-card">
+
+                            <div class="summary-icon enrolled-icon">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+
+                            <div class="summary-details">
+                                <span>Courses Enrolled</span>
+                                <h3 id="enrolledCount">0</h3>
+
+                                <p>
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                    Keep learning
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Courses Completed -->
+                        <div class="summary-card">
+
+                            <div class="summary-icon completed-icon">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+
+                            <div class="summary-details">
+                                <span>Courses Completed</span>
+                                <h3 id="completedCount">0</h3>
+
+                                <p>
+                                    <i class="fa-solid fa-trophy"></i>
+                                    Great work!
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Overall Progress -->
+                        <div class="summary-card">
+
+                            <div class="summary-icon progress-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+
+                            <div class="summary-details">
+                                <span>Overall Progress</span>
+
+                                <h3>
+                                    <span id="overallProgress">0</span>%
+                                </h3>
+
+                                <div class="mini-progress-bar">
+                                    <div
+                                        class="mini-progress-fill"
+                                        id="overallProgressBar"
+                                    ></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     MY COURSES
+                ================================== -->
+                <section class="courses-section" id="courses">
+
+                    <!-- Course Section Header -->
+                    <div class="courses-header">
+
+                        <div>
+                            <span class="section-label">
+                                LEARNING
+                            </span>
+
+                            <h2>My Courses</h2>
+
+                            <p>
+                                Continue where you left off and achieve
+                                your learning goals.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================
+                         SEARCH AND FILTERS
+                    ================================== -->
+                    <div class="course-controls">
+
+                        <!-- Search -->
+                        <div class="search-box">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <input
+                                type="text"
+                                id="searchInput"
+                                placeholder="Search your courses..."
+                                aria-label="Search courses"
+                            >
+
+                        </div>
+
+
+                        <div class="filter-controls">
+
+                            <!-- Category Filter -->
+                            <div class="select-wrapper">
+
+                                <i class="fa-solid fa-filter"></i>
+
+                                <select id="categoryFilter">
+
+                                    <option value="all">
+                                        All Categories
+                                    </option>
+
+                                    <option value="Web Development">
+                                        Web Development
+                                    </option>
+
+                                    <option value="Programming">
+                                        Programming
+                                    </option>
+
+                                    <option value="UI/UX Design">
+                                        UI/UX Design
+                                    </option>
+
+                                    <option value="Database">
+                                        Database
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- Sort Progress -->
+                            <div class="select-wrapper">
+
+                                <i class="fa-solid fa-arrow-down-wide-short"></i>
+
+                                <select id="sortFilter">
+
+                                    <option value="default">
+                                        Sort By
+                                    </option>
+
+                                    <option value="high">
+                                        Highest Progress
+                                    </option>
+
+                                    <option value="low">
+                                        Lowest Progress
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Results Information -->
+                    <div class="results-info">
+
+                        <p>
+                            Showing
+                            <strong id="courseCount">0</strong>
+                            courses
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================
+                         COURSE CARDS
+
+                         Course cards will be created
+                         dynamically using JavaScript.
+                    ================================== -->
+                    <div class="course-grid" id="courseContainer">
+
+                        <!-- JavaScript will add course cards here -->
+
+                    </div>
+
+
+                    <!-- =================================
+                         EMPTY SEARCH RESULT
+                    ================================== -->
+                    <div class="empty-state" id="emptyState">
+
+                        <div class="empty-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+
+                        <h3>No courses found</h3>
+
+                        <p>
+                            Try searching for another course
+                            or select a different category.
+                        </p>
+
+                        <button id="clearFiltersBtn" class="primary-btn">
+                            Clear Filters
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         COURSE DETAILS MODAL
+    ========================================= -->
+    <div class="modal-overlay" id="courseModal">
+
+        <div class="modal">
+
+            <!-- Close Button -->
+            <button
+                class="modal-close"
+                id="modalCloseBtn"
+                aria-label="Close course details"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+
+            <!-- Course Image -->
+            <div class="modal-image-container">
+
+                <img
+                    id="modalCourseImage"
+                    src=""
+                    alt="Course"
+                    class="modal-course-image"
+                >
+
+                <span
+                    class="modal-category"
+                    id="modalCategory"
+                >
+                    Category
+                </span>
+
+            </div>
+
+
+            <!-- Modal Information -->
+            <div class="modal-content">
+
+                <h2 id="modalCourseTitle">
+                    Course Name
+                </h2>
+
+
+                <div class="modal-instructor">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                    <span>
+                        Instructor:
+                        <strong id="modalInstructor"></strong>
+                    </span>
+
+                </div>
+
+
+                <p
+                    class="modal-description"
+                    id="modalDescription"
+                >
+                    Course description
+                </p>
+
+
+                <!-- Progress -->
+                <div class="modal-progress-section">
+
+                    <div class="progress-heading">
+
+                        <span>Your Progress</span>
+
+                        <strong>
+                            <span id="modalProgress">0</span>%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            id="modalProgressBar"
+                        ></div>
+
+                    </div>
+
+
+                    <p class="activity-text">
+
+                        <i class="fa-solid fa-list-check"></i>
+
+                        <span id="modalActivities">
+                            0 of 0 activities completed
+                        </span>
+
+                    </p>
+
+                </div>
+
+
+                <!-- Continue Button -->
+                <button
+                    class="primary-btn modal-continue-btn"
+                    id="modalContinueBtn"
+                >
+                    Continue Course
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <p>
+                © <span id="currentYear"></span>
+                EduLearn LMS. All rights reserved.
+            </p>
+
+          
+
+        </div>
+
+    </footer>
+
+
+    <!-- Main JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

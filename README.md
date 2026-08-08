@@ -41,20 +41,7 @@ No package installation or build step is required.
 
 Alternatively, start a local development server from the project directory:
 
-```bash
-# Python 3
-python -m http.server 8000
-```
-
-Then visit [http://localhost:8000](http://localhost:8000).
-
-You can also use Node.js:
-
-```bash
-npx serve .
-```
-
-Use the address displayed in the terminal.
+ 
 
 ## Screenshots
 

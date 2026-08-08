@@ -1,49 +1,85 @@
 # Front-End Task - PowerX
 
-A responsive learning management system (LMS) course dashboard built with HTML, CSS, and vanilla JavaScript.
+A responsive learning management system (LMS) course dashboard built with HTML, CSS, and JavaScript.
 
-## Features
+**EduLearn - LMS Course Dashboard**
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Google Fonts (Inter)
+- Font Awesome icons
+
+## Features Implemented
 
 - Responsive desktop and mobile layout
-- Course search, category filtering, and progress sorting
-- Course progress and summary statistics
-- Course detail modal
-- Light and dark themes with the selected theme saved in the browser
-- Mobile navigation menu
+- Search courses by title or instructor
+- Filter courses by category
+- Sort courses by progress
+- Display enrolled courses, completed courses, and overall progress
+- View course information in a details modal
+- Show an empty state when no courses match the filters
+- Clear all active filters with one button
 
-## Getting Started
+## Bonus Tasks
+
+- Dark mode with the selected theme saved in `localStorage`
+- Animated course and overall progress bars
+- Responsive mobile navigation menu
+- Dynamically generated course cards using JavaScript
+- Automatically updated current date and footer year
+
+## How to Run the Project
 
 No package installation or build step is required.
 
-### Option 1: Open the page directly
+1. Clone or download this repository.
+2. Open the project directory.
+3. Open `index.html` in a modern web browser.
 
-Clone or download this repository, then open `index.html` in a modern web browser.
+Alternatively, start a local development server from the project directory:
 
-### Option 2: Run a local development server
+```bash
+# Python 3
+python -m http.server 8000
+```
 
-From the project directory, run one of the following commands:
+Then visit [http://localhost:8000](http://localhost:8000).
 
- 
+You can also use Node.js:
+
+```bash
+npx serve .
+```
+
+Use the address displayed in the terminal.
+
+## Screenshots
+
+Save a screenshot of the completed dashboard as `images/Screenshots/image copy.png`. It will appear below automatically:
+
+![EduLearn LMS course dashboard](images/Screenshots/image.png)
+![EduLearn LMS course dashboard](images/Screenshots/image copy.png)
+
 ## Project Structure
 
 ```text
 Front-End-Task-PowerX/
-|-- index.html        # Page markup
+|-- index.html
 |-- css/
-|   `-- style.css     # Layout, components, and responsive styles
+|   `-- style.css
 |-- js/
-|   `-- script.js     # Course data and dashboard interactions
-|-- images/           # Profile and course images
+|   `-- script.js
+|-- images/
 `-- README.md
 ```
 
-## Customizing the Dashboard
+## Customization
 
-- Edit course names, instructors, categories, progress, and images in the `courses` array in `js/script.js`.
+- Edit course information in the `courses` array in `js/script.js`.
 - Update colors, spacing, and responsive styles in `css/style.css`.
 - Change page content and navigation in `index.html`.
-- Add new images to `images/` and reference them with a relative path such as `images/course-name.jpg`.
 
-## External Resources
-
-The page loads the Inter font from Google Fonts and Font Awesome icons from a CDN, so an internet connection is needed for those resources. All other project assets are local.
+The Inter font and Font Awesome icons are loaded from external CDNs, so an internet connection is required for those resources.
